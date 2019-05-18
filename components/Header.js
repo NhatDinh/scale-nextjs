@@ -1,76 +1,85 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="header-container">
-      <div className="logo-wrapper">
-        <img src="../static/images/logo.svg" alt="my image" />
-      </div>
-      <div className="nav-wrapper">
-        <ul>
-          <li>
-            <div className="dropdown">
-              <span className="dropspan">Products</span>
-              <div className="dropdown-content">
-                <ul>
-                  <li>
-                    <span>COMPUTER VISION</span>
-                  </li>
-                </ul>
+    <div className="s-container ">
+      <div className="header ">
+        <div className="logo-wrapper">
+          <Link href="/">
+            <a>
+              <img src="../static/images/logo.svg" alt="SCALE LOGO" />
+            </a>
+          </Link>
+        </div>
+        <div className="nav-wrapper">
+          <ul>
+            <li>
+              <div className="dropdown">
+                <span className="dropspan">Products</span>
+                <div className="dropdown-content">
+                  <ul>
+                    <li>
+                      <span>COMPUTER VISION</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div className="dropdown">
-              <span className="dropspan">Solutions</span>
-              <div className="dropdown-content ">
-                <ul>
-                  <li>
-                    <span>Self Driving Cars</span>
-                  </li>
-                  <li>
-                    <span>Drones</span>
-                  </li>
-                  <li>
-                    <span>Robotics</span>
-                  </li>
-                </ul>
+            </li>
+            <li>
+              <div className="dropdown">
+                <span className="dropspan">Solutions</span>
+                <div className="dropdown-content ">
+                  <ul>
+                    <li>
+                      <span>Self Driving Cars</span>
+                    </li>
+                    <li>
+                      <span>Drones</span>
+                    </li>
+                    <li>
+                      <span>Robotics</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <span>Pricing</span>
-          </li>
-          <li>
-            <span>Resources</span>
-          </li>
-          <li>
-            <span>Company</span>
-          </li>
-        </ul>
-      </div>
-      <div className="actions-wrapper">
-        <ul>
-          <li>
-            <span>Docs</span>
-          </li>
-          <li>
-            <span>
-              Log In <FontAwesomeIcon icon="angle-right" />
-            </span>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <span>Pricing</span>
+            </li>
+            <li>
+              <span>Resources</span>
+            </li>
+            <li>
+              <span>Company</span>
+            </li>
+          </ul>
+        </div>
+        <div className="actions-wrapper">
+          <ul>
+            <li>
+              <span>Docs</span>
+            </li>
+            <li>
+              <span>
+                Log In <FontAwesomeIcon icon="angle-right" />
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
       <style jsx>
         {`
-          .header-container {
-            background-color: white;
+          .s-container {
+            padding-left: 12vw;
+          }
+          .header {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             margin: auto;
-            text-align: center;
-            font-size: 16px;
-            padding: 20px 40px 20px 40px;
+            text-align: left;
+            font-size: 18px;
+            padding: 20px 0px;
           }
           .actions-wrapper span:hover {
             opacity: 0.5;
@@ -105,22 +114,21 @@ const Header = () => {
           }
 
           .header-container span {
-            transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
             cursor: pointer;
           }
 
           /* Dropdown menu on hover */
           .dropdown {
             position: relative;
-            transition: 2s cubic-bezier(0.2, 0.8, 0.2, 1);
           }
 
           .dropdown-content {
             display: none;
             position: fixed;
             background-color: white;
-            height: 350px;
-            width: 320px;
+            height: 400px;
+            width: 380px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
             border-radius: 10px;
             margin-top: 20px;

@@ -34,16 +34,13 @@ const Nav = () => {
       <style jsx>
         {`
           .s-container {
-            font-size: 14px;
             background-color: white;
             color: #ed72e2;
             display: grid;
             grid-template-columns: 0.4fr 1fr;
             margin: auto;
-            font-size: 14px;
-            line-height: 19px;
-            padding: 0 75px 0 75px;
-            margin: 0;
+            font-size: 16px;
+            line-height: 20px;
           }
           .pagelogo-wrapper {
             text-align: center;
