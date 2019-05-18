@@ -70,9 +70,6 @@ const Header = () => {
       </div>
       <style jsx>
         {`
-          .s-container {
-            padding-left: 12vw;
-          }
           .header {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
