@@ -28,6 +28,7 @@ const Index = () => (
         width: 100vw;
         height: 1000vh;
       }
+      
       .body ul {
         list-style: none;
       }

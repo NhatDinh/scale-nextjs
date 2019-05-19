@@ -36,6 +36,7 @@ const ProductCard = props => {
           background-color: #fd9d52;
           border-radius: 20px;
           justify-content: center;
+          text-transform: uppercase;
         }
 
         .product-wrapper li {
