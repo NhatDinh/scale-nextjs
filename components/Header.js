@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 const Header = () => {
@@ -61,9 +60,7 @@ const Header = () => {
               <span>Docs</span>
             </li>
             <li>
-              <span>
-                Log In <FontAwesomeIcon icon="angle-right" />
-              </span>
+              <span>Log In</span>
             </li>
           </ul>
         </div>

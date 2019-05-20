@@ -1,4 +1,3 @@
-// This is the Link API
 import Link from "next/link";
 import Header from "../components/Header";
 import PricingHero from "../components/PricingHero";

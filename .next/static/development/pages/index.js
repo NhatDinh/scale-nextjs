@@ -10674,7 +10674,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!******************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FNhat%2FDesktop%2FGithub%2Fscale%2Fpages%2Findex.js ***!
   \******************************************************************************************************************************/
@@ -10697,5 +10697,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -5,7 +5,6 @@ class PricingToggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = { showStandard: false };
-    // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -44,18 +43,32 @@ class PricingToggle extends React.Component {
         {this.state.selected}
         <div className="pc-wrapper">
           <ProductCard
+            type={this.state.showStandard}
             productName="Computer Vision"
             productDes="High level understanding from images or videos."
             featureList={[
               {
                 id: 1,
                 title: "Video Annotation",
-                content: "Contact Sales"
+                pricing: "Contact Sales",
+                type: "Enterprise",
+                featureDes: "Human-powered video annotation"
               },
               {
                 id: 2,
                 title: "Semantic Segmentation",
-                content: "$6.40 / IMAGE"
+                pricing: "$6.40 / IMAGE",
+                type: "Standard",
+                featureDes:
+                  "Human-powered pixel-level image segmentation and annotation"
+              },
+              {
+                id: 3,
+                title: "Sensor Fusion",
+                pricing: "Contact Sales",
+                type: "Enterprise",
+                featureDes:
+                  "All the data you need to build 3D perception using LiDAR, camera, and radar"
               }
             ]}
           />
@@ -66,12 +79,20 @@ class PricingToggle extends React.Component {
               {
                 id: 1,
                 title: "Ocr Transcription",
-                content: "$0.12 / INVOICE + $0.08 / ANNOTATION"
+                pricing: "$0.12 / INVOICE + $0.08 / ANNOTATION",
+                featureDes: "Invoice, Menu, and Form Transcription"
               },
               {
                 id: 2,
                 title: "Text Categorization",
-                content: "$0.08 / CATEGORIZATION"
+                pricing: "$0.08 / CATEGORIZATION",
+                featureDes: "Content Moderation, Data Tagging, Other"
+              },
+              {
+                id: 3,
+                title: "Comparison",
+                pricing: "$0.08 / COMPARISON",
+                featureDes: "Deduplication, A/B Comparisons, Others"
               }
             ]}
           />
@@ -109,13 +130,15 @@ class PricingToggle extends React.Component {
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: 2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
           }
 
           .enterpriseActive {
             border: 1px solid black;
             background: #fd62e9;
             color: white;
+            transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
           }
 
           .standard {
@@ -126,13 +149,14 @@ class PricingToggle extends React.Component {
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: 2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
           }
 
           .standardActive {
             border: 1px solid black;
             background-color: #fd62e9;
             color: white;
+            box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
           }
 
           h2 {
