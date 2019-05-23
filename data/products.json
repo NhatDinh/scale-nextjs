@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "productName": "Computer Vision",
+      "productDes": "High level understanding from images or videos.",
+      "featureList": [
+        {
+          "id": 1,
+          "title": "Video Annotation",
+          "pricing": "Contact Sales",
+          "type": "Enterprise",
+          "featureDes": "Human-powered video annotation"
+        },
+        {
+          "id": 2,
+          "title": "Semantic Segmentation",
+          "pricing": "$6.40 / IMAGE",
+          "type": "Standard",
+          "featureDes": "Human-powered pixel-level image segmentation and annotation"
+        },
+        {
+          "id": 3,
+          "title": "Sensor Fusion",
+          "pricing": "Contact Sales",
+          "type": "Enterprise",
+          "featureDes": "All the data you need to build 3D perception using LiDAR, camera, and radar"
+        }
+      ]
+    }
+  ]
+}
