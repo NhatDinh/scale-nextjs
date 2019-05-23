@@ -4,46 +4,53 @@ import ProductCard from "./ProductCard";
 class PricingToggle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showStandard: false };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = { activeType: "" };
   }
 
-  handleClick() {
-    this.setState(state => ({
-      showStandard: !this.state.showStandard
-    }));
-  }
-  componentDidMount() {
-    console.log(this.state.selected);
-  }
+  clickStandard = () => {
+    this.setState({
+      activeType: "standard"
+    });
+  };
+
+  clickEnterprise = () => {
+    this.setState({
+      activeType: "enterprise"
+    });
+  };
+
+  componentDidUpdate() {}
+
   render() {
     return (
       <div className="m-container">
         <h2>PLANS</h2>
         <div className="center-wrapper">
-          <div className="pricing-toggle" onClick={this.handleClick}>
+          <div className="pricing-toggle">
             <span
+              onClick={this.clickStandard}
+              id="standard"
               className={
-                this.state.showStandard ? "standard standardActive" : "standard"
+                this.state.activeType == "standard" ? "spanActive" : "span"
               }
             >
               Standard
             </span>
             <span
+              onClick={this.clickEnterprise}
               className={
-                this.state.showStandard
-                  ? "enterprise"
-                  : "enterprise enterpriseActive"
+                this.state.activeType == "enterprise" ? "spanActive" : "span"
               }
+              id="enterprise"
             >
               Enterprise
             </span>
           </div>
         </div>
-        {this.state.selected}
         <div className="pc-wrapper">
           <ProductCard
-            type={this.state.showStandard}
+            className="product-card"
+            activeType={this.state.activeType}
             productName="Computer Vision"
             productDes="High level understanding from images or videos."
             featureList={[
@@ -51,14 +58,14 @@ class PricingToggle extends React.Component {
                 id: 1,
                 title: "Video Annotation",
                 pricing: "Contact Sales",
-                type: "Enterprise",
+                type: "enterprise",
                 featureDes: "Human-powered video annotation"
               },
               {
                 id: 2,
                 title: "Semantic Segmentation",
                 pricing: "$6.40 / IMAGE",
-                type: "Standard",
+                type: "standard",
                 featureDes:
                   "Human-powered pixel-level image segmentation and annotation"
               },
@@ -66,32 +73,37 @@ class PricingToggle extends React.Component {
                 id: 3,
                 title: "Sensor Fusion",
                 pricing: "Contact Sales",
-                type: "Enterprise",
+                type: "enterprise",
                 featureDes:
                   "All the data you need to build 3D perception using LiDAR, camera, and radar"
               }
             ]}
           />
           <ProductCard
+            className="product-card"
             productName="Natural Language"
+            activeType={this.state.activeType}
             productDes="Processing of text in order to extract abstract syntactic and semantic content."
             featureList={[
               {
                 id: 1,
                 title: "Ocr Transcription",
                 pricing: "$0.12 / INVOICE + $0.08 / ANNOTATION",
+                type: "standard",
                 featureDes: "Invoice, Menu, and Form Transcription"
               },
               {
                 id: 2,
                 title: "Text Categorization",
                 pricing: "$0.08 / CATEGORIZATION",
+                type: "standard",
                 featureDes: "Content Moderation, Data Tagging, Other"
               },
               {
                 id: 3,
                 title: "Comparison",
                 pricing: "$0.08 / COMPARISON",
+                type: "standard",
                 featureDes: "Deduplication, A/B Comparisons, Others"
               }
             ]}
@@ -122,7 +134,7 @@ class PricingToggle extends React.Component {
             text-transform: uppercase;
           }
 
-          .enterprise {
+          .span {
             padding: 5px 20px;
             background-color: white;
             border-radius: 40px;
@@ -133,29 +145,19 @@ class PricingToggle extends React.Component {
             transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
           }
 
-          .enterpriseActive {
+          .spanActive {
+            padding: 5px 20px;
+            background-color: white;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
             border: 1px solid black;
             background: #fd62e9;
             color: white;
             transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
-          }
-
-          .standard {
-            padding: 5px 20px;
-            background-color: white;
-            border-radius: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-          }
-
-          .standardActive {
-            border: 1px solid black;
-            background-color: #fd62e9;
-            color: white;
             box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
           }
 

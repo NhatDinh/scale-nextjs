@@ -11,7 +11,6 @@ const Pricing = () => (
     <style global jsx>{`
       body {
         margin: 0;
-        height: 400vh;
         width: 100vw;
         background-image: linear-gradient(180deg, #fd9d52, #fd62e9, #fd62e9);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

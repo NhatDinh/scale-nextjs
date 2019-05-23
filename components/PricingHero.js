@@ -75,6 +75,13 @@ const PricingHero = () => (
         color: white;
         justify-content: center;
         align-items: center;
+        transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .dark-btn:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        transform: translateY(-10px);
+        color: greenyellow;
       }
 
       .dark-btn a {
