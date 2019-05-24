@@ -27,13 +27,42 @@ const PricingHero = () => (
               </Link>
             </div>
           </div>
-          <div className="col">
+          <div className="mid-col">
             <h4>🔥 Start with 5 free API calls</h4>
             <h4>🔥 Developer-friendly API</h4>
-          </div>
-          <div className="col">
             <h4>🔥 Super human accuracy of over 95%.</h4>
             <h4>🔥 Build world class AI</h4>
+          </div>
+          <div>
+            <ul className="social-proof-col">
+              <li className="logo">
+                <img src="../static/images/nuTonomy.jpg" alt="nuTonomy logo" />
+              </li>
+              <li className="logo">
+                <img src="../static/images/lyft-logo.png" alt="lyft logo" />
+              </li>
+              <li className="logo">
+                <img
+                  src="../static/images/pinterest-logo.png"
+                  alt="pinterest logo"
+                />
+              </li>
+              <li className="logo">
+                <img
+                  src="../static/images/openai-logo.png"
+                  alt="nuTonomy logo"
+                />
+              </li>
+              <li className="logo">
+                <img
+                  src="../static/images/airbnb-logo.png"
+                  alt="nuTonomy logo"
+                />
+              </li>
+              <li className="logo">
+                <img src="../static/images/uber-logo.png" alt="nuTonomy logo" />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -44,13 +73,12 @@ const PricingHero = () => (
       }
       .free-card {
         color: black;
-        height: 40vh;
         background-color: white;
         box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
         border-radius: 16px;
         padding: 10px 20px;
         display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         margin-top: 5vh;
       }
 
@@ -58,7 +86,7 @@ const PricingHero = () => (
         font-weight: 20;
       }
 
-      .col {
+      .mid-col {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
       }
@@ -76,6 +104,20 @@ const PricingHero = () => (
         justify-content: center;
         align-items: center;
         transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .social-proof-col {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      .social-proof-col img {
+        width: 100px;
+        height: 100px;
+      }
+      .social-proof-col li {
+        list-style: none;
       }
 
       .dark-btn:hover {
