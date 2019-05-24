@@ -28,12 +28,12 @@ const PricingHero = () => (
             </div>
           </div>
           <div className="col">
-            <h4> Start with 5 free API calls</h4>
-            <h4> Developer-friendly API</h4>
+            <h4>🔥 Start with 5 free API calls</h4>
+            <h4>🔥 Developer-friendly API</h4>
           </div>
           <div className="col">
-            <h4> Super human accuracy of over 95%.</h4>
-            <h4> Build world class AI</h4>
+            <h4>🔥 Super human accuracy of over 95%.</h4>
+            <h4>🔥 Build world class AI</h4>
           </div>
         </div>
       </div>
@@ -75,13 +75,12 @@ const PricingHero = () => (
         color: white;
         justify-content: center;
         align-items: center;
-        transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
       }
 
       .dark-btn:hover {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
         transform: translateY(-10px);
-        color: greenyellow;
       }
 
       .dark-btn a {

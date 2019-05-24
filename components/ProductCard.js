@@ -39,6 +39,7 @@ class ProductCard extends React.Component {
           .dark-btn:hover {
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
             transform: translateY(-10px);
+            color: #fd62e9;
           }
           .product-wrapper {
             margin: 20px;
@@ -57,8 +58,9 @@ class ProductCard extends React.Component {
           .product-wrapper h4 {
             font-size: 26px;
           }
+
           .feature-name {
-            background-color: #e23e7c;
+            background-color: #fd9d52;
             border-radius: 20px;
             padding: 5px;
             text-transform: uppercase;
