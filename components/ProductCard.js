@@ -11,7 +11,8 @@ class ProductCard extends React.Component {
         <ul>
           {this.props.featureList.map(
             feature =>
-              feature.type == this.props.activeType && (
+              (feature.type == this.props.activeType ||
+                this.props.activeType == "") && (
                 <li key={feature.id}>
                   <div className="l-col">
                     <span className="feature-name">{feature.title}</span>
