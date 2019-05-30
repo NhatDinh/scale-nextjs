@@ -22,11 +22,9 @@ const Index = () => (
         margin: 0;
         font-size: 20px;
         -webkit-font-smoothing: antialiased;
-        line-height: 1.3;
         background-color: white;
         color: #586371;
-        width: 100vw;
-        height: 1000vh;
+        min-width: 1200px;
       }
 
       .body ul {

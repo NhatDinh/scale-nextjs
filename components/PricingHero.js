@@ -70,6 +70,7 @@ const PricingHero = () => (
     <style global jsx>{`
       .hero {
         color: white;
+        margin: 0;
       }
       .free-card {
         color: black;

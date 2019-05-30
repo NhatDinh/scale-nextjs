@@ -91,7 +91,7 @@ const Hero = () => {
         }
 
         .teams-banner {
-          width: 80vw;
+          min-width: 1000px;
           height: 200px;
           font-size: 18px;
           background-color: white;
